@@ -3518,6 +3518,20 @@ UART USB</text>
 <label x="220.472" y="115.062" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
+<net name="EC20_USB_D-" class="0">
+<segment>
+<pinref part="R56" gate="G$1" pin="2"/>
+<wire x1="72.644" y1="139.954" x2="73.406" y2="139.954" width="0.1524" layer="91"/>
+<label x="73.406" y="139.954" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="EC20_USB_D+" class="0">
+<segment>
+<pinref part="R63" gate="G$1" pin="2"/>
+<wire x1="72.39" y1="134.874" x2="73.406" y2="134.874" width="0.1524" layer="91"/>
+<label x="73.406" y="134.874" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="C17" gate="G$1" pin="-"/>
@@ -3827,11 +3841,6 @@ UART USB</text>
 <label x="52.578" y="62.738" size="1.016" layer="95" xref="yes"/>
 <pinref part="USB" gate="G$1" pin="DN2"/>
 </segment>
-<segment>
-<pinref part="R56" gate="G$1" pin="2"/>
-<wire x1="72.644" y1="139.954" x2="73.406" y2="139.954" width="0.1524" layer="91"/>
-<label x="73.406" y="139.954" size="1.016" layer="95" xref="yes"/>
-</segment>
 </net>
 <net name="D+" class="0">
 <segment>
@@ -3848,11 +3857,6 @@ UART USB</text>
 <wire x1="50.8" y1="60.198" x2="52.578" y2="60.198" width="0.1524" layer="91"/>
 <label x="52.578" y="60.198" size="1.016" layer="95" xref="yes"/>
 <pinref part="USB" gate="G$1" pin="DP2"/>
-</segment>
-<segment>
-<pinref part="R63" gate="G$1" pin="2"/>
-<wire x1="72.39" y1="134.874" x2="73.406" y2="134.874" width="0.1524" layer="91"/>
-<label x="73.406" y="134.874" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$6" class="0">
