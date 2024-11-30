@@ -3070,6 +3070,9 @@ Source: &lt;a href="https://www.mouser.ch/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="X1" library="AccesControlNFC" library_urn="urn:adsk.eagle:library:37185839" deviceset="04-JST" device="-B4B-XH-A" package3d_urn="urn:adsk.eagle:package:37185910/1"/>
 <part name="GND9" library="DecawaveLibrary" library_urn="urn:adsk.eagle:library:5224885" deviceset="GND" device=""/>
+<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="X2" library="AccesControlNFC" library_urn="urn:adsk.eagle:library:37185839" deviceset="04-JST" device="-B4B-XH-A" package3d_urn="urn:adsk.eagle:package:37185910/1"/>
+<part name="GND16" library="DecawaveLibrary" library_urn="urn:adsk.eagle:library:5224885" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3518,20 +3521,6 @@ UART USB</text>
 <label x="220.472" y="115.062" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="EC20_USB_D-" class="0">
-<segment>
-<pinref part="R56" gate="G$1" pin="2"/>
-<wire x1="72.644" y1="139.954" x2="73.406" y2="139.954" width="0.1524" layer="91"/>
-<label x="73.406" y="139.954" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="EC20_USB_D+" class="0">
-<segment>
-<pinref part="R63" gate="G$1" pin="2"/>
-<wire x1="72.39" y1="134.874" x2="73.406" y2="134.874" width="0.1524" layer="91"/>
-<label x="73.406" y="134.874" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="C17" gate="G$1" pin="-"/>
@@ -3841,6 +3830,11 @@ UART USB</text>
 <label x="52.578" y="62.738" size="1.016" layer="95" xref="yes"/>
 <pinref part="USB" gate="G$1" pin="DN2"/>
 </segment>
+<segment>
+<pinref part="R56" gate="G$1" pin="2"/>
+<wire x1="72.644" y1="139.954" x2="73.406" y2="139.954" width="0.1524" layer="91"/>
+<label x="73.406" y="139.954" size="1.016" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="D+" class="0">
 <segment>
@@ -3857,6 +3851,11 @@ UART USB</text>
 <wire x1="50.8" y1="60.198" x2="52.578" y2="60.198" width="0.1524" layer="91"/>
 <label x="52.578" y="60.198" size="1.016" layer="95" xref="yes"/>
 <pinref part="USB" gate="G$1" pin="DP2"/>
+</segment>
+<segment>
+<pinref part="R63" gate="G$1" pin="2"/>
+<wire x1="72.39" y1="134.874" x2="73.406" y2="134.874" width="0.1524" layer="91"/>
+<label x="73.406" y="134.874" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -3997,7 +3996,7 @@ UART USB</text>
 </instance>
 <instance part="X1" gate="-1" x="214.122" y="129.286" smashed="yes">
 <attribute name="NAME" x="215.138" y="128.524" size="1.524" layer="95"/>
-<attribute name="VALUE" x="210.058" y="130.81" size="1.778" layer="96"/>
+<attribute name="VALUE" x="203.962" y="133.096" size="1.016" layer="96"/>
 </instance>
 <instance part="X1" gate="-2" x="214.122" y="126.746" smashed="yes">
 <attribute name="NAME" x="215.138" y="125.984" size="1.524" layer="95"/>
@@ -4010,6 +4009,25 @@ UART USB</text>
 </instance>
 <instance part="GND9" gate="1" x="204.47" y="121.666" smashed="yes" rot="R270">
 <attribute name="VALUE" x="204.216" y="121.666" size="1.016" layer="96" rot="R270" align="top-center"/>
+</instance>
+<instance part="P+4" gate="VCC" x="204.47" y="129.286" smashed="yes" rot="R90">
+<attribute name="VALUE" x="203.962" y="129.794" size="1.016" layer="96" rot="R180"/>
+</instance>
+<instance part="X2" gate="-1" x="213.868" y="111.506" smashed="yes">
+<attribute name="NAME" x="214.884" y="110.744" size="1.524" layer="95"/>
+<attribute name="VALUE" x="204.47" y="114.808" size="1.016" layer="96"/>
+</instance>
+<instance part="X2" gate="-2" x="213.868" y="108.966" smashed="yes">
+<attribute name="NAME" x="214.884" y="108.204" size="1.524" layer="95"/>
+</instance>
+<instance part="X2" gate="-3" x="213.868" y="106.426" smashed="yes">
+<attribute name="NAME" x="214.884" y="105.664" size="1.524" layer="95"/>
+</instance>
+<instance part="X2" gate="-4" x="213.868" y="103.886" smashed="yes">
+<attribute name="NAME" x="214.884" y="103.124" size="1.524" layer="95"/>
+</instance>
+<instance part="GND16" gate="1" x="204.216" y="103.886" smashed="yes" rot="R270">
+<attribute name="VALUE" x="203.962" y="103.886" size="1.016" layer="96" rot="R270" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -4042,6 +4060,11 @@ UART USB</text>
 <pinref part="X1" gate="-4" pin="1"/>
 <wire x1="209.042" y1="121.666" x2="207.01" y2="121.666" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-4" pin="1"/>
+<wire x1="208.788" y1="103.886" x2="206.756" y2="103.886" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="VBUS" class="0">
@@ -4197,12 +4220,22 @@ UART USB</text>
 <wire x1="163.83" y1="105.41" x2="166.37" y2="105.41" width="0.1524" layer="91"/>
 <label x="166.37" y="105.41" size="1.016" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="X1" gate="-2" pin="1"/>
+<wire x1="209.042" y1="126.746" x2="207.01" y2="126.746" width="0.1524" layer="91"/>
+<label x="207.01" y="126.746" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="RXD" class="0">
 <segment>
 <pinref part="IC3" gate="G$1" pin="TXD"/>
 <wire x1="163.83" y1="107.95" x2="166.37" y2="107.95" width="0.1524" layer="91"/>
 <label x="166.37" y="107.95" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-3" pin="1"/>
+<wire x1="209.042" y1="124.206" x2="207.01" y2="124.206" width="0.1524" layer="91"/>
+<label x="207.01" y="124.206" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$137" class="0">
@@ -4213,22 +4246,32 @@ UART USB</text>
 <wire x1="114.3" y1="97.028" x2="114.3" y2="96.774" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="VCC" class="0">
 <segment>
 <pinref part="X1" gate="-1" pin="1"/>
 <wire x1="209.042" y1="129.286" x2="207.01" y2="129.286" width="0.1524" layer="91"/>
+<pinref part="P+4" gate="VCC" pin="VCC"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="EC20_3V3" class="0">
 <segment>
-<pinref part="X1" gate="-2" pin="1"/>
-<wire x1="209.042" y1="126.746" x2="207.01" y2="126.746" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-1" pin="1"/>
+<wire x1="208.788" y1="111.506" x2="206.756" y2="111.506" width="0.1524" layer="91"/>
+<label x="206.756" y="111.506" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="EC20_WAKEUP" class="0">
 <segment>
-<pinref part="X1" gate="-3" pin="1"/>
-<wire x1="209.042" y1="124.206" x2="207.01" y2="124.206" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-2" pin="1"/>
+<wire x1="208.788" y1="108.966" x2="206.756" y2="108.966" width="0.1524" layer="91"/>
+<label x="206.756" y="108.966" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="EC20_RST" class="0">
+<segment>
+<pinref part="X2" gate="-3" pin="1"/>
+<wire x1="208.788" y1="106.426" x2="206.756" y2="106.426" width="0.1524" layer="91"/>
+<label x="206.756" y="106.426" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
